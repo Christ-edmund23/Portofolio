@@ -1,10 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import Background from "../src/assets/BG-Lake.jpg"
-import Profile from "../src/assets/Profile.jpeg"
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown'
-import { motion } from 'framer-motion'
-import { useState } from 'react'
 import { Routes, Route, useLocation} from "react-router-dom"
 import Navbar from './Components/Navbar'
 import Home from './Components/Home'

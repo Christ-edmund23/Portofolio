@@ -1,12 +1,75 @@
 import React from "react";
 import transition from '../transition';
+import Background from '../assets/contact-BG.jpg'
+import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+import EmailIcon from '@mui/icons-material/Email';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import { motion } from "framer-motion";
 
 function Contact (){
 
     return(
         <>
-        <div className="bg-lime-300 h-screen">
-            <h1 className="w-[80%] text-6xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 leading-[1] uppercase text-center">Contact Page</h1>
+        <div
+        className="h-screen text-white"
+        style={{
+                    backgroundImage: `url(${Background})`,
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                    backgroundColor: "rgba(0, 0, 0, 0.5)", // Black with 70% transparency
+                    backgroundBlendMode: "overlay", 
+                }}
+        >
+            <div className="flex justify-center items-center h-screen w-screen ">
+                <div className="flex flex-col bg-slate-800 border border-2 border-slate-700 flex top rounded-lg w-1/2 h-1/2">
+                    <div className="text-4xl p-4 font-mono mb-5 mt-5 flex items-center justify-center font-bold">
+                        Contact
+                    </div>
+                        <div className="flex flex-row justify-center items-center">
+                            {/* Left Section */}
+                            <div className="flex flex-col justify-center items-center w-1/2 gap-5">
+                                <div className="flex flex-row items-center gap-5 bg-gray-900 px-4 py-4 w-3/4 ">
+                                    <LocalPhoneIcon />
+                                    <h3 >+6281212605579</h3>
+                                </div>
+                                <div className="flex flex-row items-center gap-5 bg-gray-900 px-4 py-4 w-3/4">
+                                    <EmailIcon />
+                                    <h3 >christ.edmund@gmail.com</h3>
+                                </div>
+                                <div className="flex flex-row items-center gap-5 bg-gray-900 px-4 py-4 w-3/4">
+                                    <LinkedInIcon />
+                                    <h3 >Christopher Edmund Haryanto</h3>
+                                </div>
+                                <div className="flex flex-row items-center gap-5 bg-gray-900 px-4 py-4 w-3/4">
+                                    <InstagramIcon />
+                                    <h3 >Christ_edmund23</h3>
+                                </div>
+                            </div>
+                            <div className="border-l-2 border-gray-500 h-full" />
+                            {/* Right Section */}
+                            <div className="flex flex-col items-center gap-4 w-1/2">
+                                <input className="bg-gray-900 w-3/4 text-white p-2 pl-4 text-sm" placeholder="Your Name" />
+                                <input className="bg-gray-900 w-3/4 text-white p-2 pl-4 text-sm" placeholder="Email Address" />
+                                <textarea className="bg-gray-900 w-3/4 text-white p-2 pl-4 text-sm text-balance max-h-32 min-h-20" placeholder="add a message..." />
+                                <motion.button  
+                                    whileTap = {{scale: 0.9}} 
+                                    whileHover = {{
+                                        scale : 1.1, 
+                                        backgroundColor : "#d1d5db", 
+                                        color: "#000000",
+                                    }}
+                                    transition={{
+                                        bounceDamping: 10, 
+                                        bounceStiffness: 600
+                                    }}
+                                    className=" bg-emerald-600 w-3/4 py-1 rounded-lg text-gray-100 font-light tracking-wid font bold">
+                                        Send
+                                </motion.button >
+                            </div>
+                        </div>
+                </div>
+            </div>
         </div>
         </>
     );
