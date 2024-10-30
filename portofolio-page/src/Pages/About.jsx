@@ -1,6 +1,7 @@
 import React from "react"
-import transition from '../transition'
+import transition from '../components/transition'
 import { motion } from 'framer-motion'
+import ScrollProgressAnimation from "../components/ScrollProgressAnimation"
 import Timeline from "@mui/lab/Timeline"
 import TimelineItem, { timelineItemClasses } from '@mui/lab/TimelineItem';
 import TimelineSeparator from '@mui/lab/TimelineSeparator'
@@ -33,7 +34,8 @@ function About (){
     }
 
     return(
-        <>
+        <div className="bg-slate-900">
+        <ScrollProgressAnimation />
         <div className="flex justify-center items-center min-h-screen bg-slate-900">
             <div className="flex flex-row w-full max-w-6xl">
                 {/* Education */}
@@ -416,7 +418,7 @@ function About (){
                     </Card>
                 </div>
         </div>
-        </>
+        </div>
     );
 }
 

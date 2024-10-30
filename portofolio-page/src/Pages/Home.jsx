@@ -5,7 +5,7 @@ import Profile from "../assets/Profile.jpeg"
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
-import transition from '../transition'
+import transition from '../components/transition'
 import { useNavigate } from 'react-router-dom'
 
 const InitialAnimation = {

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Routes, Route, useLocation} from "react-router-dom"
-import Navbar from './Components/Navbar'
-import Home from './Components/Home'
-import About from './Components/About'
-import Contact from './Components/Contact';
+import Navbar from './Pages/Navbar'
+import Home from './Pages/Home'
+import About from './Pages/About'
+import Contact from './Pages/Contact';
 import { AnimatePresence } from 'framer-motion';
 
 const InitialAnimation = {

@@ -1,5 +1,5 @@
 import React from "react";
-import transition from '../transition';
+import transition from '../components/transition';
 import Background from '../assets/contact-BG.jpg'
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import EmailIcon from '@mui/icons-material/Email';

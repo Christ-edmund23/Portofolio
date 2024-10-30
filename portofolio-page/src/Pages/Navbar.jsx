@@ -6,9 +6,6 @@ function navbar (){
     return(
         <>
         <div className="px-8 py-8 flex flex-row items-center p-4 bg-slate-800 text-white">
-            <Link className='nav-link' to ="/">
-                            Logo
-             </Link>
                 <div className="ml-auto mr-20">
                     <nav className=" flex space-x-8 font-bold">
                         <div className="nav-links">
