@@ -5,7 +5,8 @@ import Profile from "../assets/Profile.jpeg"
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
-import transition from '../transition';
+import transition from '../transition'
+import { useNavigate } from 'react-router-dom'
 
 const InitialAnimation = {
     hidden : { opacity: 0 },
@@ -18,6 +19,11 @@ const InitialAnimation = {
 }
 
 function Home() {
+    const navigate = useNavigate();
+
+    const handleNavigate = () => {
+        navigate("/about");
+    }
 
     return (
         <>
@@ -35,8 +41,12 @@ function Home() {
                     initial = "hidden"
                     animate = "show"
                     >
-                    <motion.div className=''>
-                        <motion.div className="flex flex-row items-center text-white w-full justify-center pt-10 pb-10 flex justify-center h-screen w-screen ">
+                        <motion.div 
+                        className="flex flex-row items-center text-white w-full pt-10 pb-10 flex justify-center h-screen w-screen "
+                        initial = {{opacity : 0 ,y :-100}}
+                        animate = {{opacity : 1 ,y : 0}}
+                        transition={{duration : 1, ease: 'easeIn', delay: 0.2}}
+                        >
                             <div className="flex flex-col w-1/2">
                                 <div className='text-3xl gap-2 font-semibold mb-5'>
                                     <p>Hello,</p>
@@ -45,20 +55,30 @@ function Home() {
                                 </div>
                                 <div className='text-sm text-wrap text-balance w-3/4 mb-4'>
                                     <p>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                                        I am Computer Science student at Binus University with a keen interest in Data Analytics. I am
+                                        committed to honing my skills and knowledge in Data Analysis, Data Visualization, and Statistical
+                                        Modelling. I am a very enthusiastic about extracting valuable insights from data to help businesses 
+                                        to optimize their strategies and improve their decision making processes.
                                     </p>
                                 </div>
+                                <motion.button
+                                whileTap={{scale : 0.9}}
+                                whileHover={{
+                                    scale : 1.1,
+                                    backgroundColor : "#0000000",
+                                    border: "2px solid rgb(0, 191, 255)",
+                                    color: "rgb(0, 191, 255)"
+                                }}
+                                className='bg-sky-600 flex justify-center w-24 py-2 rounded-lg font-light tracking-wide font-semibold'
+                                onClick={handleNavigate}
+                                >
+                                    About Me
+                                </motion.button>
                             </div>
                                 <div className="flex flex-col w-1/4 ">
                                     <img src={Profile} alt="" className="rounded-full" />
                                 </div>
                         </motion.div>
-                    </motion.div>
-                    {/* About Us Section */}
-                    <motion.div className=''>
-
-                    </motion.div>
                 </motion.section>    
             </div>
         </>
