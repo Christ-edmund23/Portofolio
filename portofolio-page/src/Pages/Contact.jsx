@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import transition from '../components/transition';
 import Background from '../assets/contact-BG.jpg'
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
@@ -8,6 +8,15 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import { motion } from "framer-motion";
 
 function Contact (){
+
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
+
+    function test(){
+        let item = {name, email,message}
+        console.warn(item)
+    }
 
     return(
         <>
@@ -49,9 +58,24 @@ function Contact (){
                             <div className="border-l-2 border-gray-500 h-full" />
                             {/* Right Section */}
                             <div className="flex flex-col items-center gap-4 w-1/2">
-                                <input className="bg-gray-900 w-3/4 text-white p-2 pl-4 text-sm" placeholder="Your Name" />
-                                <input className="bg-gray-900 w-3/4 text-white p-2 pl-4 text-sm" placeholder="Email Address" />
-                                <textarea className="bg-gray-900 w-3/4 text-white p-2 pl-4 text-sm text-balance max-h-32 min-h-20" placeholder="add a message..." />
+                                <input 
+                                    className="bg-gray-900 w-3/4 text-white p-2 pl-4 text-sm" 
+                                    placeholder="Your Name"
+                                    value={name}
+                                    onChange={(e) => setName(e.target.value)} 
+                                />
+                                <input 
+                                    className="bg-gray-900 w-3/4 text-white p-2 pl-4 text-sm" 
+                                    placeholder="Email Address" 
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)} 
+                                />
+                                <textarea 
+                                    className="bg-gray-900 w-3/4 text-white p-2 pl-4 text-sm text-balance max-h-32 min-h-20" 
+                                    placeholder="add a message..." 
+                                    value={message}
+                                    onChange={(e) => setMessage(e.target.value)} 
+                                />
                                 <motion.button  
                                     whileTap = {{scale: 0.9}} 
                                     whileHover = {{
@@ -63,7 +87,9 @@ function Contact (){
                                         bounceDamping: 10, 
                                         bounceStiffness: 600
                                     }}
-                                    className=" bg-emerald-600 w-3/4 py-1 rounded-lg text-gray-100 font-light tracking-wid font bold">
+                                    className=" bg-emerald-600 w-3/4 py-1 rounded-lg text-gray-100 font-light tracking-wid font bold"
+                                    onClick={test}
+                                    >
                                         Send
                                 </motion.button >
                             </div>

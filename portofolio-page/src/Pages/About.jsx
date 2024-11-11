@@ -18,7 +18,7 @@ import Typography from '@mui/material/Typography';
 
 function About (){
     const NavigateCard1 = () => {
-        window.location.href = "https://file.notion.so/f/f/9ef38880-1886-44b1-af6f-7b8f359595ca/f6d3635e-cad7-499e-b9f7-bdb5ec1e0d63/Object_Detection_For_Home_Security_Using_YOLOv7_Model.pdf?table=block&id=e2b8d8d0-dc99-47fc-a3b1-625c5a89f298&spaceId=9ef38880-1886-44b1-af6f-7b8f359595ca&expirationTimestamp=1730347200000&signature=yPmntRAwQ2STwWVbzMiLKvV-iISfEFilcArViEBmh4A&downloadName=Object+Detection+For+Home+Security+Using+YOLOv7+Model.pdf";
+        window.location.href = "https://www.notion.so/Christopher-Edmund-Haryanto-83629cf48c3747a09209c262623186e0";
     }
 
     const NavigateCard2 = () => {
@@ -26,11 +26,11 @@ function About (){
     }
 
     const NavigateCard3 = () => {
-        window.location.href = "https://file.notion.so/f/f/9ef38880-1886-44b1-af6f-7b8f359595ca/b669c04f-116a-4f6f-b7bc-d44280e5dd99/Project_Predictive_Analytics_Terhadap_Penyakit_COVID-19_-_Kelompok_1.pdf?table=block&id=e12dd4a3-108f-47c6-9c40-e0c4807cf913&spaceId=9ef38880-1886-44b1-af6f-7b8f359595ca&expirationTimestamp=1730347200000&signature=B65sSjrranCazNXoPFm2dlLnxXq9O2cy7-4vhXIjnhw&downloadName=Project+Predictive+Analytics+Terhadap+Penyakit+COVID-19+-+Kelompok+1.pdf"
+         window.location.href = "https://www.notion.so/Christopher-Edmund-Haryanto-83629cf48c3747a09209c262623186e0";
     }
 
     const NavigateCard4 = () => {
-        window.location.href = "https://file.notion.so/f/f/9ef38880-1886-44b1-af6f-7b8f359595ca/90c8d0c3-36fc-4a54-a518-967029687dcc/CORRELATION_BETWEEN_THE_NUMBERS_OF_PRIVATE_VEHICLE_AND_TRAFFIC_CONGESTION.pdf?table=block&id=4b2848a5-6b76-461d-b34f-e527fe63ac4a&spaceId=9ef38880-1886-44b1-af6f-7b8f359595ca&expirationTimestamp=1730347200000&signature=1DR4HGe0OV620CMdYT2Z7J8khKYgwWmlaz7QsffLIVY&downloadName=CORRELATION+BETWEEN+THE+NUMBERS+OF+PRIVATE+VEHICLE+AND+TRAFFIC+CONGESTION.pdf"
+         window.location.href = "https://www.notion.so/Christopher-Edmund-Haryanto-83629cf48c3747a09209c262623186e0";
     }
 
     return(
