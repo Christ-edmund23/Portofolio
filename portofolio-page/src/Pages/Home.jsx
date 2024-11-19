@@ -1,10 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 import Background from "../assets/BG-Lake.jpg"
 import Profile from "../assets/Profile.jpeg"
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown'
 import { motion } from 'framer-motion'
-import { useState } from 'react'
 import transition from '../components/transition'
 import { useNavigate } from 'react-router-dom'
 
@@ -42,7 +39,7 @@ function Home() {
                     animate = "show"
                     >
                         <motion.div 
-                        className="flex flex-row items-center text-white w-full pt-10 pb-10 flex justify-center h-screen w-screen "
+                        className="flex flex-row items-center text-white pt-10 pb-10 justify-center h-screen w-screen "
                         initial = {{opacity : 0 ,y :-100}}
                         animate = {{opacity : 1 ,y : 0}}
                         transition={{duration : 1, ease: 'easeIn', delay: 0.2}}
@@ -53,7 +50,7 @@ function Home() {
                                     <p>I'm <span className="text-sky-300">Christopher Edmund Haryanto</span></p>
                                     <p>a Data Analyst</p>
                                 </div>
-                                <div className='text-sm text-wrap text-balance w-3/4 mb-4'>
+                                <div className='text-xl text-balance w-3/4 mb-4'>
                                     <p>
                                         I am Computer Science student at Binus University with a keen interest in Data Analytics. I am
                                         committed to honing my skills and knowledge in Data Analysis, Data Visualization, and Statistical
@@ -69,7 +66,7 @@ function Home() {
                                     border: "2px solid rgb(0, 191, 255)",
                                     color: "rgb(0, 191, 255)"
                                 }}
-                                className='bg-sky-600 flex justify-center w-24 py-2 rounded-lg font-light tracking-wide font-semibold'
+                                className='bg-sky-600 flex justify-center w-24 py-2 rounded-lg tracking-wide font-semibold'
                                 onClick={handleNavigate}
                                 >
                                     About Me

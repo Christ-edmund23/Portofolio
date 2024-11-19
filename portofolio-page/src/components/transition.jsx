@@ -10,7 +10,7 @@ const transition = (OgComponent) => {
                     initial={{ scaleY: 1 }} // Start visible
                     animate={{ scaleY: 0 }} // Scale down
                     exit={{ scaleY: 1 }} // Scale back up when exiting
-                    transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+                    transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
                 />
 
                 <motion.div
@@ -18,7 +18,7 @@ const transition = (OgComponent) => {
                     initial={{ scaleY: 1 }} // Start visible
                     animate={{ scaleY: 0 }} // Scale down
                     exit={{ scaleY: 1 }} // Scale back up when exiting
-                    transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+                    transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
                 />
             </>
         );

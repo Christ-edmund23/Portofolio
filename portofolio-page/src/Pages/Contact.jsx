@@ -31,7 +31,7 @@ function Contact (){
                 }}
         >
             <div className="flex justify-center items-center h-screen w-screen ">
-                <div className="flex flex-col bg-slate-800 border border-2 border-slate-700 flex top rounded-lg w-1/2 h-1/2">
+                <div className="flex flex-col bg-slate-800  border-2 border-slate-700 top rounded-lg w-1/2 h-1/2">
                     <div className="text-4xl p-4 font-mono mb-5 mt-5 flex items-center justify-center font-bold">
                         Contact
                     </div>
