@@ -37,7 +37,7 @@ function About (){
         <div className="bg-slate-900">
         <ScrollProgressAnimation />
         <div className="flex justify-center items-center min-h-screen bg-slate-900">
-            <div className="flex flex-row w-full max-w-6xl">
+            <div className="flex flex-row w-full max-w-6xl mt-10 mb-10">
                 {/* Education */}
                 <div className="flex flex-col w-1/2 items-center">
                     <h1 className="text-2xl font-bold text-white mb-5 flex ">Education</h1>

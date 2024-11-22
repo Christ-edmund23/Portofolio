@@ -7,15 +7,6 @@ import Contact from './Pages/Contact';
 import { AnimatePresence } from 'framer-motion';
 import Cover from './Pages/Cover';
 
-const InitialAnimation = {
-    hidden : { opacity: 0 },
-    show: {
-        opacity : 1,
-        transition : {
-            staggerChildren: 2,
-        },
-    },
-}
 
 function App() {
     const location = useLocation();
