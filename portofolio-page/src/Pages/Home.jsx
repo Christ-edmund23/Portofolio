@@ -48,14 +48,13 @@ function Home() {
                                 <div className='text-3xl gap-2 font-semibold mb-5'>
                                     <p>Hello,</p>
                                     <p>I'm <span className="text-sky-300">Christopher Edmund Haryanto</span></p>
-                                    <p>a Data Analyst</p>
+                                    {/* <p>a Data Analyst</p> */}
                                 </div>
-                                <div className='text-xl text-balance w-3/4 mb-4'>
+                                <div className='text-xl text-balance w-3/4 mb-4 mt-4'>
                                     <p>
-                                        I am Computer Science student at Binus University with a keen interest in Data Analytics. I am
-                                        committed to honing my skills and knowledge in Data Analysis, Data Visualization, and Statistical
-                                        Modelling. I am a very enthusiastic about extracting valuable insights from data to help businesses 
-                                        to optimize their strategies and improve their decision making processes.
+                                        I am Computer Science student at Binus University with a keen interest in starting my carrer in the
+                                        Tech Industry. Eager to apply academic knowledge in a real-world setting, coupled with excellent
+                                        communication skills and a passion for staying abreast of emerging technologies.
                                     </p>
                                 </div>
                                 <motion.button
