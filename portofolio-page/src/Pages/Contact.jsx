@@ -6,17 +6,35 @@ import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import { motion } from "framer-motion";
+import { CircularProgress } from "@mui/material";
+import Alert from '@mui/material/Alert';
 
 function Contact (){
 
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [message, setMessage] = useState("");
+    const [result, setResult] = useState("");
 
-    function test(){
-        let item = {name, email,message}
-        console.warn(item)
-    }
+    const onSubmit = async (event) => {
+        event.preventDefault();
+        setResult("Sending....");
+        const formData = new FormData(event.target);
+
+        formData.append("access_key", "2f0eafbc-ba78-425b-9dfc-9fbddc027523");
+
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            setResult("Success");
+            event.target.reset();
+        } else {
+            console.log("Error", data);
+            setResult(data.message);
+        }
+    };
 
     return(
         <>
@@ -57,24 +75,30 @@ function Contact (){
                             </div>
                             <div className="border-l-2 border-gray-500 h-full" />
                             {/* Right Section */}
-                            <div className="flex flex-col items-center gap-4 w-1/2">
-                                <input 
+                            <form 
+                                className="flex flex-col items-center gap-4 w-1/2"
+                                onSubmit={onSubmit}
+                            >
+                                <span className="text-white w-3/4 ">{result == 'Success'? <Alert variant="filled" severity="success">Form Submitted Successfully</Alert>:""}</span>
+                                <input
+                                    type="text" 
                                     className="bg-gray-900 w-3/4 text-white p-2 pl-4 text-sm" 
                                     placeholder="Your Name"
-                                    value={name}
-                                    onChange={(e) => setName(e.target.value)} 
+                                    name = "name"
+                                    required
                                 />
-                                <input 
+                                <input
+                                    type="email" 
                                     className="bg-gray-900 w-3/4 text-white p-2 pl-4 text-sm" 
                                     placeholder="Email Address" 
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)} 
+                                    name="email"
+                                    required
                                 />
                                 <textarea 
                                     className="bg-gray-900 w-3/4 text-white p-2 pl-4 text-sm text-balance max-h-32 min-h-20" 
-                                    placeholder="add a message..." 
-                                    value={message}
-                                    onChange={(e) => setMessage(e.target.value)} 
+                                    placeholder="add a message..."
+                                    name="message" 
+                                    required
                                 />
                                 <motion.button  
                                     whileTap = {{scale: 0.9}} 
@@ -88,11 +112,12 @@ function Contact (){
                                         bounceStiffness: 600
                                     }}
                                     className=" bg-emerald-600 w-3/4 py-1 rounded-lg text-gray-100 font-light tracking-wid font bold"
-                                    onClick={test}
-                                    >
-                                        Send
+                                    type="submit"
+                                >
+                                    {result == 'Sending....' ? <CircularProgress  size="1rem" color="inherit"/>: 'Send'}
                                 </motion.button >
-                            </div>
+
+                            </form>
                         </div>
                 </div>
             </div>
