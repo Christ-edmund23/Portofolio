@@ -36,11 +36,11 @@ function About (){
     return(
         <div className="bg-slate-900">
         <ScrollProgressAnimation />
-        <div className="flex justify-center items-center min-h-screen bg-slate-900">
-            <div className="flex flex-row w-full max-w-6xl mt-10 mb-10">
+        <div className="flex justify-center items-center h-[90vh] bg-slate-900">
+            <div className="flex flex-row w-full max-w-6xl">
                 {/* Education */}
                 <div className="flex flex-col w-1/2 items-center">
-                    <h1 className="text-2xl font-bold text-white mb-5 flex ">Education</h1>
+                    <h1 className="text-4xl font-bold text-white mb-5 flex ">Education</h1>
                         <motion.div>
                             <Timeline
                             sx={{
@@ -71,10 +71,10 @@ function About (){
                                     }}
                                 >
                                     <TimelineContent color= "white">
-                                        <p className="pb-2 text-sky-300">August 2018</p>
-                                        <h2 className="font-bold">High School Diploma</h2>
-                                        <p className="text-sm">Canisius College - Natural Science</p>
-                                        <p className="text-sm text-gray-300">Aug 2018 - May 2021</p>
+                                        <p className="pb-2 text-sky-300 text-xl font-bold">August 2018</p>
+                                        <h2 className="font-bold text-xl">High School Diploma</h2>
+                                        <p className="">Canisius College - Natural Science</p>
+                                        <p className=" text-gray-300">Aug 2018 - May 2021</p>
                                     </TimelineContent>
                                 </motion.div>
                             </TimelineItem>
@@ -100,10 +100,10 @@ function About (){
                                     }}
                                 >
                                     <TimelineContent color= "white">
-                                        <p className="pb-2 text-sky-300">August 2021</p>
-                                        <h2 className="font-bold">Bachelor Degree</h2>
-                                        <p className="text-sm">Binus University - Computer Science</p>
-                                        <p className="text-sm text-gray-300">Aug 2021 - Present</p>
+                                        <p className="pb-2 text-sky-300 text-xl font-bold">August 2021</p>
+                                        <h2 className="font-bold text-xl">Bachelor Degree</h2>
+                                        <p >Binus University - Computer Science</p>
+                                        <p className=" text-gray-300">Aug 2021 - Aug 2025</p>
                                     </TimelineContent>
                                 </motion.div>
                             </TimelineItem>
@@ -113,7 +113,7 @@ function About (){
                 </div>
                 {/* Experience */}
                 <div className="w-1/2 flex flex-col items-center">
-                    <h1 className="text-2xl font-bold text-white mb-5 ">Experience</h1>
+                    <h1 className="text-4xl font-bold text-white mb-5 ">Experience</h1>
                         <Timeline
                             sx={{
                                 [`& .${timelineItemClasses.root}:before`]: {
@@ -143,10 +143,10 @@ function About (){
                                     }}
                                 >
                                 <TimelineContent color= "white">
-                                    <p className="pb-2 text-sky-300">March 2022</p>
-                                    <h2 className="font-bold">Member of Web Development Division</h2>
-                                    <p className="text-sm">HIMTI BINUS University - Full Time</p>
-                                    <p className="text-sm text-gray-300">Mar 2021 - Nov 2023</p>
+                                    <p className="pb-2 text-sky-300 text-xl font-bold">March 2021</p>
+                                    <h2 className="font-bold text-xl">Member of Web Development Division</h2>
+                                    <p>HIMTI BINUS University - Full Time</p>
+                                    <p className="text-gray-300">Mar 2021 - Nov 2023</p>
                                 </TimelineContent>
                             </motion.div>
                         </TimelineItem>
@@ -172,10 +172,10 @@ function About (){
                                     }}
                                 >
                                 <TimelineContent color= "white">
-                                    <p className="pb-2 text-sky-300">April 2022</p>
-                                    <h2 className="font-bold">Member of HISHOT 2022 Committe</h2>
-                                    <p className="text-sm">HIMTI BINUS University - Full Time</p>
-                                    <p className="text-sm text-gray-300">Apr 2022 - Jul 2022</p>
+                                    <p className="pb-2 text-sky-300 text-xl font-bold">April 2022</p>
+                                    <h2 className="font-bold text-xl">Member of HISHOT 2022 Committe</h2>
+                                    <p className="">HIMTI BINUS University - Full Time</p>
+                                    <p className=" text-gray-300">Apr 2022 - Nov 2023</p>
                                 </TimelineContent>
                             </motion.div>
                         </TimelineItem>
@@ -201,10 +201,10 @@ function About (){
                                     }}
                                 >
                                 <TimelineContent color= "white">
-                                    <p className="pb-2 text-sky-300">August 2022</p>
-                                    <h2 className="font-bold">Freshman Leader for Binusian 2026</h2>
-                                    <p className="text-sm">BINUS University - Full Time</p>
-                                    <p className="text-sm text-gray-300">Aug 2022 - Sep 2022</p>
+                                    <p className="pb-2 text-sky-300 text-xl font-bold">August 2022</p>
+                                    <h2 className="font-bold text-xl">Freshman Leader for Binusian 2026</h2>
+                                    <p className="">BINUS University - Full Time</p>
+                                    <p className=" text-gray-300">Aug 2022 - Sep 2022</p>
                                 </TimelineContent>
                             </motion.div>
                         </TimelineItem>
@@ -230,10 +230,38 @@ function About (){
                                     }}
                             >
                                 <TimelineContent color= "white">
-                                    <p className="pb-2 text-sky-300">November 2022</p>
-                                    <h2 className="font-bold">Contestant</h2>
-                                    <p className="text-sm">ICPC - International Collegiate Programming Contest</p>
-                                    <p className="text-sm text-gray-300">Nov 2022 - Nov 2022</p>
+                                    <p className="pb-2 text-sky-300 text-xl font-bold">November 2022</p>
+                                    <h2 className="font-bold text-xl">Contestant</h2>
+                                    <p className="">ICPC - International Collegiate Programming Contest</p>
+                                    <p className=" text-gray-300">Nov 2022 - Nov 2022</p>
+                                </TimelineContent>
+                            </motion.div>
+                        </TimelineItem>
+                        <TimelineItem>
+                            <TimelineSeparator>
+                                <TimelineDot />
+                                <TimelineConnector />
+                            </TimelineSeparator>
+                            <motion.div
+                                    whileHover={{
+                                        scale: 1.1,
+                                        backgroundColor:'#334155',
+                                        border: "2px solid #06b6d4",
+                                        padding : "10px"
+                                    }}
+                                    transition={{
+                                        duration:0.5
+                                    }}
+                                    style={{
+                                        border: "2px solid transparent",
+                                        borderRadius : "8px",
+                                    }}
+                            >
+                                <TimelineContent color= "white">
+                                    <p className="pb-2 text-sky-300 text-xl font-bold">February 2024</p>
+                                    <h2 className="font-bold text-xl">Application Developer Intern</h2>
+                                    <p className="">PT INSPIRO - Full time</p>
+                                    <p className=" text-gray-300">Feb 2024 - Sep 2024</p>
                                 </TimelineContent>
                             </motion.div>
                         </TimelineItem>
@@ -259,68 +287,10 @@ function About (){
                                     }}
                             >
                                 <TimelineContent color= "white">
-                                    <p className="pb-2 text-sky-300">December 2022</p>
-                                    <h2 className="font-bold">Member of TECHFEST 2022 Committe</h2>
-                                    <p className="text-sm">HIMTI BINUS University - Full time</p>
-                                    <p className="text-sm text-gray-300">Dec 2022 - Dec 2022</p>
-                                </TimelineContent>
-                            </motion.div>
-                        </TimelineItem>
-
-                        <TimelineItem>
-                            <TimelineSeparator>
-                                <TimelineDot />
-                                <TimelineConnector />
-                            </TimelineSeparator>
-                            <motion.div
-                                    whileHover={{
-                                        scale: 1.1,
-                                        backgroundColor:'#334155',
-                                        border: "2px solid #06b6d4",
-                                        padding : "10px"
-                                    }}
-                                    transition={{
-                                        duration:0.5
-                                    }}
-                                    style={{
-                                        border: "2px solid transparent",
-                                        borderRadius : "8px",
-                                    }}
-                            >
-                                <TimelineContent color= "white">
-                                    <p className="pb-2 text-sky-300">February 2022</p>
-                                    <h2 className="font-bold">Application Developer Intern</h2>
-                                    <p className="text-sm">PT INSPIRO - Full time</p>
-                                    <p className="text-sm text-gray-300">Feb 2024 - Sep 2024</p>
-                                </TimelineContent>
-                            </motion.div>
-                        </TimelineItem>
-
-                        <TimelineItem>
-                            <TimelineSeparator>
-                                <TimelineDot />
-                                <TimelineConnector />
-                            </TimelineSeparator>
-                            <motion.div
-                                    whileHover={{
-                                        scale: 1.1,
-                                        backgroundColor:'#334155',
-                                        border: "2px solid #06b6d4",
-                                        padding : "10px"
-                                    }}
-                                    transition={{
-                                        duration:0.5
-                                    }}
-                                    style={{
-                                        border: "2px solid transparent",
-                                        borderRadius : "8px",
-                                    }}
-                            >
-                                <TimelineContent color= "white">
-                                    <p className="pb-2 text-sky-300">September 2022</p>
-                                    <h2 className="font-bold">Quality Assurance Intern</h2>
-                                    <p className="text-sm">PT INSPIRO - Full time</p>
-                                    <p className="text-sm text-gray-300">Aug 2024 - Feb 2025</p>
+                                    <p className="pb-2 text-sky-300 text-xl font-bold">September 2024</p>
+                                    <h2 className="font-bold text-xl">Quality Assurance Intern</h2>
+                                    <p className="">PT INSPIRO - Full time</p>
+                                    <p className=" text-gray-300">Aug 2024 - Feb 2025</p>
                                 </TimelineContent>
                             </motion.div>
                         </TimelineItem>
